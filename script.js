@@ -29,12 +29,11 @@ function mostraPerguntas(){
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     mostraAlternativas();
 }
- function mostraAlternativas(){
-     for (const alternativas of perguntaAtual.alternativas){
-        const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent = alternativas;
-        caixaAlternativas.appendChild(botaoAlternativas);
-     }
- }
-
+function mostraAlternativas(){
+   for (const alternativa of perguntaAtual.alternativas){
+    const botaoAlternativas = document.createElement("button");
+    botaoAlternativas.textContent = alternativa;
+    caixaAlternativas.appendChild(botaoAlternativas);
+   } 
+}
 mostraPerguntas();
